@@ -98,4 +98,4 @@ PRETTIFY = "bundle exec xcpretty --color; exit ${PIPESTATUS[0]}"
 
 PODSPEC_PATH = "#{LIBRARY_NAME}.podspec"
 POD_LINT_TOOL = 'bundle exec pod lib lint'
-POD_LINT_FLAGS = "#{PODSPEC_PATH}"
+POD_LINT_FLAGS = "#{PODSPEC_PATH} --allow-warnings"
