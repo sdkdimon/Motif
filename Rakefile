@@ -82,7 +82,7 @@ BUILD_FLAGS_IOS =
     "-destination 'platform=iOS Simulator,OS=latest,name=iPhone 6' "\
     "-destination 'platform=iOS Simulator,OS=latest,name=iPhone 5' "\
     "ONLY_ACTIVE_ARCH=YES "\
-    "CODE_SIGNING_REQUIRED=NO " + BUILD_FLAGS
+    "CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= " + BUILD_FLAGS
 
 BUILD_FLAGS_TEST_IOS = "test -scheme '#{LIBRARY_NAME}-iOS' " + BUILD_FLAGS_IOS
 BUILD_FLAGS_TEST_OSX = "test -scheme '#{LIBRARY_NAME}-OSX' " + BUILD_FLAGS
