@@ -12,6 +12,7 @@
 #import "MTFReverseTransformedValueClass.h"
 #import "MTFObjCTypeValueTransformer.h"
 #import "MTFValueTransformerErrorHandling.h"
+#import "NSValueTransformer+MTFRegistry.h"
 
 #import "NSValueTransformer+Registration.h"
 
@@ -51,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
     if (objc_lookUpClass(name.UTF8String) != Nil) return NO;
 
     // Do not allow repeat registrations
-    if ([NSValueTransformer valueTransformerForName:name] != nil) return NO;
+    if ([NSValueTransformer mtf_valueTransformerForName:name] != nil) return NO;
 
     Class class = objc_allocateClassPair(
         NSValueTransformer.class,
@@ -208,7 +209,7 @@ NS_ASSUME_NONNULL_BEGIN
     }
 
     NSValueTransformer *valueTransformer = [[class alloc] init];
-    [self setValueTransformer:valueTransformer forName:name];
+    [self mtf_setValueTransformer:valueTransformer forName:name];
 
     return YES;
 }

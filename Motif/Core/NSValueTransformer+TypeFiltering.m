@@ -9,6 +9,7 @@
 #import "NSValueTransformer+TypeFiltering.h"
 #import "MTFReverseTransformedValueClass.h"
 #import "MTFObjCTypeValueTransformer.h"
+#import "NSValueTransformer+MTFRegistry.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
     NSParameterAssert(object != nil);
     NSParameterAssert(objCType != NULL);
     
-    NSArray<NSString *> *valueTransformerNames = NSValueTransformer.valueTransformerNames;
+    NSArray<NSString *> *valueTransformerNames = [NSValueTransformer mtf_valueTransformerNames];
     
     for (NSString *valueTransformerName in valueTransformerNames) {
-        NSValueTransformer *valueTransfomerForName = [NSValueTransformer valueTransformerForName:valueTransformerName];
+        NSValueTransformer *valueTransfomerForName = [NSValueTransformer mtf_valueTransformerForName:valueTransformerName];
         BOOL isObjCTypeTransformer = [valueTransfomerForName conformsToProtocol:@protocol(MTFObjCTypeValueTransformer)];
         BOOL hasKnownInputClass = [valueTransfomerForName conformsToProtocol:@protocol(MTFReverseTransformedValueClass)];
         
@@ -47,10 +48,10 @@ NS_ASSUME_NONNULL_BEGIN
     NSParameterAssert(object != nil);
     NSParameterAssert(toClass != Nil);
     
-    NSArray<NSString *> *valueTransformerNames = NSValueTransformer.valueTransformerNames;
+    NSArray<NSString *> *valueTransformerNames = [NSValueTransformer mtf_valueTransformerNames];
     
     for (NSString *valueTransformerName in valueTransformerNames) {
-        NSValueTransformer *valueTransfomerForName = [NSValueTransformer valueTransformerForName:valueTransformerName];
+        NSValueTransformer *valueTransfomerForName = [NSValueTransformer mtf_valueTransformerForName:valueTransformerName];
         BOOL hasKnownInputClass = [valueTransfomerForName conformsToProtocol:@protocol(MTFReverseTransformedValueClass)];
         
         if (hasKnownInputClass) {

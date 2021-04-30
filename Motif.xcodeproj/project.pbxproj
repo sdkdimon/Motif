@@ -217,6 +217,10 @@
 		3AF7D8351C3CF16D000B6141 /* NSValueTransformer_MotifUIEdgeInsetsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB5BF31B1EE086006C9C67 /* NSValueTransformer_MotifUIEdgeInsetsSpec.m */; };
 		3AFF69EB1C2D1DA90046140D /* MTFValueTransformerErrorHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AFF69EA1C2D1DA90046140D /* MTFValueTransformerErrorHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3AFF69EC1C2D1DA90046140D /* MTFValueTransformerErrorHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AFF69EA1C2D1DA90046140D /* MTFValueTransformerErrorHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A7245C6263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A7245C4263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A7245C7263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A7245C4263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A7245C8263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7245C5263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.m */; };
+		8A7245C9263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7245C5263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -397,6 +401,8 @@
 		3AEB5BF31B1EE086006C9C67 /* NSValueTransformer_MotifUIEdgeInsetsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformer_MotifUIEdgeInsetsSpec.m; sourceTree = "<group>"; };
 		3AF3C6181B1BDE6100F0D3D4 /* NoExtensionTheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NoExtensionTheme; sourceTree = "<group>"; };
 		3AFF69EA1C2D1DA90046140D /* MTFValueTransformerErrorHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTFValueTransformerErrorHandling.h; sourceTree = "<group>"; };
+		8A7245C4263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+MTFRegistry.h"; sourceTree = "<group>"; };
+		8A7245C5263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+MTFRegistry.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +446,8 @@
 		3A02C80F1AD206FF00C420F2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8A7245C4263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.h */,
+				8A7245C5263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.m */,
 				3A5C07D31C2CB6F500DB6EAB /* MTFErrors.h */,
 				3A5C07D41C2CB6F500DB6EAB /* MTFErrors.m */,
 				3A24F6A81BCB8F51003D0F1B /* MTFThemeApplier.h */,
@@ -746,6 +754,7 @@
 				3A5D79531C42EF8400645869 /* NSValueTransformer+MotifCGPoint.h in Headers */,
 				3A21963A1B1B9376006159D4 /* NSBundle+ExtensionURLs.h in Headers */,
 				3A02C89F1AD2072600C420F2 /* NSString+ThemeSymbols.h in Headers */,
+				8A7245C7263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.h in Headers */,
 				3A1C4F5A1AEDD49C0048F84C /* MTFFileObservationContext.h in Headers */,
 				3AE8E4EF1B2519B300CCC758 /* MTFThemeClassPropertyApplier.h in Headers */,
 				3A02C8831AD2072500C420F2 /* MTFDynamicThemeApplier_Private.h in Headers */,
@@ -808,6 +817,7 @@
 				3A2196391B1B9376006159D4 /* NSBundle+ExtensionURLs.h in Headers */,
 				3A02C87E1AD206FF00C420F2 /* UIColor+HTMLColors.h in Headers */,
 				3A6C1D641B1443CA0034F5A8 /* yaml_private.h in Headers */,
+				8A7245C6263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.h in Headers */,
 				3A02C84F1AD206FF00C420F2 /* MTFTheme.h in Headers */,
 				3A02C8591AD206FF00C420F2 /* MTFThemeConstant_Private.h in Headers */,
 				3A02C8511AD206FF00C420F2 /* MTFTheme_Private.h in Headers */,
@@ -938,6 +948,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 3A79EC561AC9147E000CCC01;
@@ -1034,6 +1045,7 @@
 				3A6C1D4E1B143E840034F5A8 /* api.c in Sources */,
 				3A5D79541C42EF8400645869 /* NSValueTransformer+MotifCGPoint.m in Sources */,
 				3A6C1D5C1B143E840034F5A8 /* writer.c in Sources */,
+				8A7245C9263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.m in Sources */,
 				3A6C1D5A1B143E840034F5A8 /* scanner.c in Sources */,
 				3A6C1D581B143E840034F5A8 /* reader.c in Sources */,
 				3A6C1D541B143E840034F5A8 /* loader.c in Sources */,
@@ -1079,6 +1091,7 @@
 				3A9082791B0562FE00CF07AD /* NSValueTransformer+Registration.m in Sources */,
 				3A02C85E1AD206FF00C420F2 /* MTFThemeSymbolReference.m in Sources */,
 				3A1C4F5B1AEDD49C0048F84C /* MTFFileObservationContext.m in Sources */,
+				8A7245C8263C5E7200CF1FA4 /* NSValueTransformer+MTFRegistry.m in Sources */,
 				3A02C8581AD206FF00C420F2 /* MTFThemeConstant.m in Sources */,
 				3A02C8671AD206FF00C420F2 /* NSObject+ThemeClass.m in Sources */,
 				3A02C8601AD206FF00C420F2 /* NSDictionary+DictionaryValueValidation.m in Sources */,

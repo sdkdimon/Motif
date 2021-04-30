@@ -267,7 +267,7 @@ describe(@"property application", ^{
         expect(error).to.beNil();
         expect(appliedValue).to.equal(@1);
 
-        [NSValueTransformer setValueTransformer:nil forName:transformerName];
+        [NSValueTransformer mtf_setValueTransformer:nil forName:transformerName];
     });
 
     it(@"should propapgate errors from value transformers when applying", ^{
@@ -302,7 +302,7 @@ describe(@"property application", ^{
         expect(error.domain).to.equal(MTFErrorDomain);
         expect(error.code).to.equal(MTFErrorFailedToApplyTheme);
 
-        [NSValueTransformer setValueTransformer:nil forName:transformerName];
+        [NSValueTransformer mtf_setValueTransformer:nil forName:transformerName];
     });
 
     it(@"should propagate errors from the applier block", ^{
@@ -477,7 +477,7 @@ describe(@"property application", ^{
         [appliedValue getValue:&size];
         expect(size).to.equal((CGSize){ value.integerValue, value.integerValue });
 
-        [NSValueTransformer setValueTransformer:nil forName:transformerName];
+        [NSValueTransformer mtf_setValueTransformer:nil forName:transformerName];
     });
 
     it(@"should propapgate errors from value transformers when applying", ^{
@@ -512,7 +512,7 @@ describe(@"property application", ^{
         expect(error.domain).to.equal(MTFErrorDomain);
         expect(error.code).to.equal(MTFErrorFailedToApplyTheme);
 
-        [NSValueTransformer setValueTransformer:nil forName:transformerName];
+        [NSValueTransformer mtf_setValueTransformer:nil forName:transformerName];
     });
 
     it(@"should propagate errors from the applier block", ^{

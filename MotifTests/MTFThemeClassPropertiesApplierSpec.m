@@ -259,7 +259,7 @@ it(@"should propapgate errors from value transformers when applying", ^{
         expect(error.domain).to.equal(MTFErrorDomain);
         expect(error.code).to.equal(MTFErrorFailedToApplyTheme);
 
-        [NSValueTransformer setValueTransformer:nil forName:transformerName];
+        [NSValueTransformer mtf_setValueTransformer:nil forName:transformerName];
     });
 });
 

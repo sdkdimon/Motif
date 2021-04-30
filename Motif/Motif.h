@@ -25,6 +25,7 @@ FOUNDATION_EXPORT const unsigned char MotifVersionString[];
 #import <Motif/NSObject+ThemeClass.h>
 #import <Motif/NSObject+ThemeClassAppliers.h>
 #import <Motif/NSValueTransformer+Registration.h>
+#import <Motif/NSValueTransformer+MTFRegistry.h>
 #import <Motif/NSValueTransformer+TypeFiltering.h>
 
 #if TARGET_OS_IPHONE
