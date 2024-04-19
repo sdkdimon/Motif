@@ -363,7 +363,7 @@ static inline CGFloat MTFNormHue(CGFloat hue)
 }
 
 // Hex characters
-static NSCharacterSet *MTFHexCharacters() {
+static NSCharacterSet *MTFHexCharacters(void) {
     static NSCharacterSet *hexChars;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -523,7 +523,7 @@ static inline MTFFloatTriple HSL2HSB(CGFloat hue, CGFloat saturation, CGFloat l)
 }
 
 // Color names, longest first
-static NSArray *MTFW3CColorNames() {
+static NSArray *MTFW3CColorNames(void) {
     static NSArray *colorNames;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -543,7 +543,7 @@ static NSArray *MTFW3CColorNames() {
 
 // Color values as defined in CSS3 spec.
 // See: http://www.w3.org/TR/css3-color/#svg-color
-static NSDictionary *MTFW3CNamedColors() {
+static NSDictionary *MTFW3CNamedColors(void) {
     static NSDictionary *namedColors;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

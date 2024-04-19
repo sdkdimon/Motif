@@ -30,3 +30,6 @@ ruby/
 
 # Carthage
 Carthage/Build
+
+# macOS
+.DS_Store

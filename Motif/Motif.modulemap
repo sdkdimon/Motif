@@ -1,0 +1,4 @@
+framework module Motif {
+  umbrella header "Motif.h"
+  export *
+}
